@@ -41,7 +41,6 @@
     display: block;
     max-width: 100%;
     height: auto;
-    margin-bottom: 30px;
   }
 
   /* CONTAINER */
@@ -62,7 +61,7 @@
     flex-wrap: wrap;
     margin-top: calc( -1 * var(--card-set-gap));
     margin-left: calc( -1 * var(--card-set-gap));
-    padding-bottom: 92px;
+    padding-bottom: px;
   }
   .card-set > .item {
     flex-basis: calc(100% / 3 - var(--card-set-gap)); 
@@ -78,7 +77,7 @@
     outline: 1px;
   }
   .card-content {
-    padding: 10px;
+    padding-bottom: 30px;
   }
   .card-text {
     margin-top: 10px;
@@ -111,25 +110,29 @@
 
   /* BUTTON */
   .button {
-      padding: 6px, 22px;
+      padding: 6px 22px;
       font-family: inherit;
       font-weight: 700;
       font-size: 16px;
       line-height: 1.87;
       letter-spacing: 0.06em;
       border-radius: 4px;
+      border: 0;
   }
   .button-main {
-      padding: 10px, 32px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.87;
+      letter-spacing: 0.06em;
+      padding: 10px 32px;
       color: var(--dark-bg-text-color);
-      background-color: var(--accent-color);
-      margin-top: 40px;
-      margin-bottom: 210px;  
+      background-color: var(--accent-color);  
       border-radius: 4px;
-      width: 200px;
-      height: 60px;
+      min-width: 200px;
+      height: 50px;
       margin-left: auto;
       margin-right: auto;
+      border: 0;
   }
   .button:focus,
   .button:hover{
@@ -143,7 +146,8 @@
     display: inline-flex;
   }
   .menu-item: not( :last-child ) {
-    margin-right: px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .pad {
     margin-left: 50px;
@@ -157,8 +161,7 @@
     letter-spacing: 0.06em; 
     color: var(--dark-bg-text-color);
     text-transform: uppercase;
-    margin-top: 200px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
   .page-current {
       color: var(--accent-color);
@@ -196,11 +199,7 @@
     --tittle-color: var(--dark-bg-text-color);
   }
   .section {
-    padding-top: 94px;
     padding-bottom: 94px;
-  }
-  .p {
-    margin-bottom: 78px;
   }
 
   /* PORTFOLIO */
@@ -217,16 +216,14 @@
     font-size: 18px;
     line-height: 1.87;
     letter-spacing: 0.03em;
-    color: var(--main-text-color);
-    margin-bottom: 20px;   
+    color: var(--main-text-color);   
   }
   .portfolio {
     --grid-item: 5;
     padding-left: auto;
     padding-right: auto;
-  }
-  .portfolio-item {
-    ;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
   
   /* HEADER */
@@ -278,52 +275,72 @@
   .gallery {
     display: flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: -30px;
   }
   .gallery-item {
     --grid-item: 3;
+    margin-right: 30px;
+  }
+  .methods {
+    --grid-item: 4;
+    display: flex;
+    padding-right: -30px;
+  }
+  .methods-item {
+    margin-right: 30px;
   }
 
   /* TEAM */
   .team {
       background-color: var(--dark-bg-text-color);
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      --grid-item: 4;
   }
   .team-item {
-    --grid-item: 4;
     text-align: center
   }
   .team-member {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
-    letter-spacing: 0.03em;
     color: var(--tittle-color);
     margin-bottom: 10px;  
   }
   .team-member-position {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
-    letter-spacing: 0.03em;
-    color: var(--main-text-color); 
-    margin-bottom: 30px;
+    color: var(--main-text-color);
+  }
+  .team-img {
+    padding-bottom: 30px;
+  }
+  .team-content {
+    padding-bottom: 30px;
   }
   .grid {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-    padding-top: 96px;
+    margin-bottom: 34px;
+    padding-left: -8px;
   }
   .grid-item {
     margin-left: 8px;
-    margin-bottom: 50px;
   }
 
   /* HERO */
   .hero {
-    height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-bottom: 94px;
   }
   .hero .container {
     display: flex;
