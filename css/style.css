@@ -74,11 +74,19 @@
   .item {
     outline: 1px;
   }
+  .item:hover,
+  .item:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); 
+  }
   .card-content {
     padding: 20px 0 24px 20px;
+    border: 1px solid #eee;;
   }
   .card-text {
     margin-top: 10px;
+  }
+  .card-link {
+    text-decoration: none;
   }
 
   /* LINK */
@@ -139,6 +147,10 @@
   }
   .pointer {
     cursor: pointer;
+  }
+  .pointer:hover,
+  .pointer:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
   .menu {
     display: inline-flex;
@@ -237,7 +249,10 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--tittle-color); 
-    text-decoration: none;  
+    text-decoration: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ececec;
   }
   .header .container {
     display: flex;
@@ -311,13 +326,13 @@
     margin-bottom: 30px;
     display: block;
     content: "";
-    height: 70px;
-    background-size: contain;
+    width: 270px;
+    height: 120px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #f5f4fa;
   }
-  . ::before {
+  . ::before .icon {
     box-sizing: border-box;
   }
   .antenna::before {
@@ -344,6 +359,7 @@
   .team-item {
     text-align: center;
     margin-right: 30px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
   .team-member {
     font-weight: 500;
@@ -415,11 +431,11 @@
     height: 600px;
     margin-left: auto;
     margin-right: auto;
-    outline: 1px solid black;
+    outline: ;
     background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), url(../img/background.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
   } 
   .hero-content {
     width: 55%;
@@ -442,6 +458,8 @@
     display: inline-block;
     margin-right: 30px;
     margin-bottom: 94px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
   }
   .clients-icons .icon {
     display: block;
@@ -449,7 +467,7 @@
     fill: #AFB1B8;
   }
   .clients-link {
-    outline: 1px solid #AFB1B8;
+    outline: px solid #AFB1B8;
     width: 170px;
     height: 90px;
     display: flex;
@@ -460,9 +478,9 @@
   .clients-link:focus .icon {
     fill: var(--accent-color);
   }
-  .clients-link:hover,
-  .clients-link:focus {
-    outline-color: var(--accent-color);
+  .clients-icons:hover,
+  .clients-icons:focus {
+    border-color: var(--accent-color);
   }
   .clients-tittle {
     font-weight: 700;
@@ -491,21 +509,16 @@
     color: var(--dark-bg-text-color);
   }
   .footer-item {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-right: 70px;
+    margin-right: 70px;
   }
   .address {
     margin-top: 20px;
   }
   .footer-container {
     display: flex;
-    --grid-item: 2;
-    justify-content:flex-start;
-  }
-  .footer-social {
-    padding-top: 75px;
-    padding-bottom: 97px;
+    align-items: baseline;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .social-call {
     font-weight: 700;
